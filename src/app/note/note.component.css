@@ -1,0 +1,72 @@
+
+/* Font and size for note text.*/
+.notetext {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  background-color: transparent;
+}
+.notetext:focus{
+  background-color: transparent;
+}
+
+/* Smooth transitions/animation for hovering over the cards.*/
+.card {
+  box-shadow: -11px 11px 22px #0000004d, -11px 11px 22px #00000041;
+  transition: transform 150ms ease;
+  transition: all 150ms ease-out;
+  background-color: #ffffff;
+}
+
+/* Enables scale and backwards tilt features on hover.*/
+.card:hover {
+  z-index: 1;
+  transform: scale(1.03) perspective(90px) rotateX(0.15deg);
+}
+
+.button {
+  outline: none;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 100%;
+  height: 14px;
+  width: 14px;
+}
+.button:active {
+  transform: translateY(4px);
+}
+.b_white {background-color: #e5e1e1; margin-left: 40px;}
+.b_yellow {background-color: #ffebb0;}
+.b_red {background-color: #ff9f97;}
+.b_green {background-color: #b3ea95;}
+
+
+
+
+/* UNUSED CSS FOR TESTING STYLES*/
+
+/* .card:active {
+  transition: all 100ms ease-out;
+  transform: scale(1.1) perspective(100px) ;
+}
+
+.btn-default {
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.btn-change {
+  color: rgb(0, 0, 0);
+  background-color: #fce497;
+}
+
+.btn-change:focus {
+  color: rgb(0, 0, 0);
+  background-color: #ffebb0;
+} */
+

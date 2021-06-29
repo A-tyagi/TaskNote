@@ -1,0 +1,23 @@
+<div class="card" name="card" [ngStyle]="{'background-color': color}">
+  <div class="card-header">
+    <!-- CLOSE/DELETE BUTTON -->
+    <button type="button" class="close" aria-label="Close" (click)="deleteNote()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <!-- NOTE DATE -->
+    <div className="color-picker">
+      <p class="card-text">{{noteObj.dateString()}}
+        <button class="button b_white" (click)="changeColor('#ffffff')"></button>
+        <button class="button b_yellow" (click)="changeColor('#ffebb0')"></button>
+        <button class="button b_green" (click)="changeColor('#b3ea95')"></button>
+        <button class="button b_red" (click)="changeColor('#ff9f97')"></button></p>
+
+    </div>
+  </div>
+  <!-- NOTE TEXTAREA, CALLS SAVE FUNCTION WHEN USER FINISHES TYPING -->
+  <textarea #textfeild name="notetext" (click)="clearInput()" (keyup)="save(data,$event)"
+    [(ngModel)]="data" class="form-control notetext" style="box-shadow:none;border:none;resize: none;" rows="7"
+    autocomplete="off">
+
+  </textarea>
+</div>

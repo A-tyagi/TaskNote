@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,400i,700);
+
+/* demo styles */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+body {
+  height: 100%;
+  min-height:100vh;
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #25c481, #25b7c4);
+  font-family: "Roboto", sans-serif;
+}
+section {
+  margin: 50px;
+}
+
+/* TASKNOTE TITLE */
+.maintitle {
+  font-size: 70px !important;
+  color: #fff;
+  text-align: left !important;
+  margin-top: 15px;
+  margin-left: -20px;
+  margin-bottom: 40px;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+/* NEW NOTE BUTTON */
+.addbtn {
+  transition: transform 100ms ease;
+  transition: all 100ms ease-out;
+  margin: 0 !important;
+  padding: 0px !important;
+  margin-bottom: 22px !important;
+  margin-left: 260px !important;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.addbtn:hover {
+  transform: scale(1.25) perspective(90px);
+}
+.addbtn:active {
+  cursor: pointer;
+  outline: none;
+  transform: translateY(4px);
+}
+.addbtn:focus {
+  outline: 0 !important;
+}
+
+/* SEARCH BAR */
+.searchbar input[type="text"] {
+  font-family: "Raleway", sans-serif;
+  font-size: 14pt;
+  height: 60px;
+  border: none;
+  border-radius: 100px;
+  width: 349px;
+  box-shadow: inset -10px 10px 20px #c9c9c9, inset 10px -10px 20px #ffffff;
+}
+.searchbar {
+  transition: transform 150ms ease;
+  transition: all 150ms ease-out;
+}
+.searchbar:hover {
+  transform: scale(1.08) perspective(90px);
+}
+.navbar {
+  margin: 0 !important;
+  padding: 0px !important;
+}
+
+/* CARDS */
+.card {
+  box-shadow: -11px 11px 22px #0000004d, -11px 11px 22px #00000041;
+}
+.notetext {
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+}
+
+
