@@ -31,22 +31,23 @@ export class AppComponent {
   }
 
   // An event is triggered when the user is done typing
-  // Function then creates a new searchResultMap of only the note objects 
-  // that contain the matching searchStr. 
+  // Function then creates a new searchResultMap of only the note objects
+  // that contain the matching searchStr.
   // Finally sets display results as searchResultMap to update screen
   search(searchStr: string, event: any) {
     console.log('searching for: ', this.searchString);
+    let newSearchString = this.searchString.toLowerCase();
     clearTimeout(this.timeout);
     var $this = this;
     this.timeout = setTimeout(function () {
       $this.searchResultMap = new Map();
-      if ($this.searchString && $this.searchString != '') {
+      if (newSearchString && newSearchString !== '') {
         for (let [key, value] of NotedataService.allNotesMap) {
-          if (value['textData'].includes($this.searchString)) {
+          if (value['textData'].toLowerCase().includes(newSearchString)) {
             $this.searchResultMap.set(key, value);
           }
         }
-        console.log('searcherd for: ', $this.searchString);
+        console.log('searched for: ', newSearchString);
         console.log($this.searchResultMap);
         $this.myNotesMap = $this.searchResultMap;
       } else {
